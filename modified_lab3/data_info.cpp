@@ -1,5 +1,4 @@
 // "Copyright 2018 Sadiq
-
 #include <iostream>
 #include "data_info.h"
 
@@ -16,7 +15,7 @@ FileInformations::FileInformations(string filepath) {
     cin>> linenumbersought;
     cout<<endl<<endl;
     if (File.is_open()) {
-        while ((getline(File,lineinformation)&&(!File.eof()))) {
+        while ((getline(File,lineinformation, ',')&&(!File.eof()))) {
             linenumber++;          
             if(linenumber == linenumbersought) {
                 Data s(lineinformation);
